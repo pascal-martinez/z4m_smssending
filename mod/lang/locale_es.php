@@ -18,8 +18,8 @@
  * --------------------------------------------------------------------
  * ZnetDK 4 Mobile SMS Sending Module Spanish translations
  *
- * File version: 1.0
- * Last update: 05/17/2025
+ * File version: 1.1
+ * Last update: 05/18/2025
  */
 
 define('MOD_Z4M_SMSSENDING_PARENT_MENU_LABEL', 'Envío de SMS');
@@ -49,6 +49,7 @@ define('MOD_Z4M_SMSSENDING_CONFIG_ALERT_THRESHOLD_PLACEHOLDER', 'Cantidad de cr�
 define('MOD_Z4M_SMSSENDING_CONFIG_OPTIONS_SENDING_LABEL', 'Envío de SMS activado');
 define('MOD_Z4M_SMSSENDING_CONFIG_OPTIONS_SENDING_DISABLED_ERROR', 'El envío de SMS est desactivado.');
 define('MOD_Z4M_SMSSENDING_CONFIG_OPTIONS_HISTORY_LABEL', 'Historial de envío de SMS activado');
+define('MOD_Z4M_SMSSENDING_CONFIG_CREDIT_BALANCE_LABEL', 'Saldo de crédito de SMS');
 define('MOD_Z4M_SMSSENDING_CONFIG_SIMULATION_BUTTON_LABEL', 'Enviar un SMS de simulación...');
 define('MOD_Z4M_SMSSENDING_CONFIG_FORM_NOT_SAVED_MESSAGE', 'Guarde los cambios antes de realizar esta acción.');
 define('MOD_Z4M_SMSSENDING_CONFIG_SIMULATION_MESSAGE', 'Este es un SMS de simulación.');

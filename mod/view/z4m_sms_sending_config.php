@@ -19,8 +19,8 @@
  * --------------------------------------------------------------------
  * ZnetDK 4 Mobile SMS sending module view
  *
- * File version: 1.0
- * Last update: 05/15/2025
+ * File version: 1.1
+ * Last update: 06/18/2025
  */
 
 // Setting the $color $variable
@@ -51,7 +51,6 @@ require 'fragment/color_scheme.php';
             <label><b><?php echo MOD_Z4M_SMSSENDING_CONFIG_ALERT_THRESHOLD_LABEL; ?></b>
                 <input class="w3-input w3-border w3-margin-bottom" type="number" name="alert_threshold" min="1" placeholder="<?php echo MOD_Z4M_SMSSENDING_CONFIG_ALERT_THRESHOLD_PLACEHOLDER; ?>">
             </label>
-            <div class="w3-padding"></div>
             <label class="w3-show-block w3-margin-bottom">
                 <input class="w3-check" type="checkbox" name="is_sending_enabled" value="1">
                 <span><?php echo MOD_Z4M_SMSSENDING_CONFIG_OPTIONS_SENDING_LABEL; ?></span>
@@ -59,6 +58,10 @@ require 'fragment/color_scheme.php';
             <label class="w3-show-block w3-margin-bottom">
                 <input class="w3-check" type="checkbox" name="is_history_enabled" value="1">
                 <span><?php echo MOD_Z4M_SMSSENDING_CONFIG_OPTIONS_HISTORY_LABEL; ?></span>
+            </label>
+            <div class="w3-padding"></div>
+            <label><b><?php echo MOD_Z4M_SMSSENDING_CONFIG_CREDIT_BALANCE_LABEL; ?></b>
+                <input class="w3-input w3-border w3-margin-bottom" type="number" name="credit_balance" disabled>
             </label>
             <div class="w3-padding"></div>
             <button class="w3-button w3-block <?php echo $color['btn_submit']; ?> w3-section" type="submit"><i class="fa fa-save fa-lg"></i> <?php echo LC_BTN_SAVE; ?></button>

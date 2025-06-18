@@ -19,8 +19,8 @@
  * --------------------------------------------------------------------
  * ZnetDK 4 Mobile SMS sending module view
  *
- * File version: 1.0
- * Last update: 05/24/2025
+ * File version: 1.1
+ * Last update: 06/18/2025
  */
 
 require 'fragment/color_scheme.php';
@@ -90,14 +90,14 @@ require 'fragment/color_scheme.php';
             </div>
             <div class="w3-col s12 m3 l3 w3-padding-small">
                 <div>{{message}}</div>
-                <div class="w3-tag <?php echo $color['tag']; ?>">{{business_reference}}</div>
+                {{business_reference_display}}                
             </div>
             <div class="w3-col s12 m2 l3 w3-padding-small">
                 <div class="w3-row">
                     <div class="w3-col status-col" style="">
                         <span class="w3-tag {{status_class}}">{{status_label}}</span>
-                    </div>
-                    <div class="w3-rest">{{error_message}}</div>
+                    </div>                    
+                    <div class="w3-rest">{{sms_sent_id}}{{error_message}}</div>
                 </div>
             </div>
         </div>
@@ -146,12 +146,16 @@ require 'fragment/color_scheme.php';
         historyList.beforeInsertRowCallback = function(rowData) {
             rowData.status_class = rowData.status === '1' ? 'w3-green' : 'w3-red';
             rowData.status_label = rowData.status === '1' ? 'OK' : 'KO';
+            rowData.sms_sent_id = '<span>&nbsp;ID = <b>' + rowData.message_id + '</b></span>';
+            rowData.business_reference_display = rowData.business_reference.length > 0 
+                ? '<div class="w3-tag <?php echo $color['tag']; ?>">' + rowData.business_reference + '</div>' : '';
             if (rowData.error_message.length > 0) {
                 const shortMsg = rowData.error_message.length < 106
                     ? rowData.error_message : rowData.error_message.substring(0, 106) + '...';
                 rowData.error_message = '<span class="w3-text-red" title="'
-                        + rowData.error_message + '"><i class="fa fa-warning"></i> <b>'
+                        + rowData.error_message + '">&nbsp;<i class="fa fa-warning"></i> <b>'
                         + shortMsg + '</b></span>';
+                rowData.sms_sent_id = '';
             }
         };
         // Filled cells are displayed

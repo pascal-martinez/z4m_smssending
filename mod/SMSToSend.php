@@ -19,8 +19,8 @@
  * --------------------------------------------------------------------
  * ZnetDK 4 Mobile SMS sending module class
  *
- * File version: 1.0
- * Last update: 05/24/2025
+ * File version: 1.1
+ * Last update: 06/17/2025
  */
 
 namespace z4m_smssending\mod;
@@ -234,7 +234,7 @@ class SMSToSend {
      * @throws \ZDKException SMS sending has failed
      */
     public function send($message, $recipientPhoneNumber, $recipientName = NULL, $businessReference = NULL) {
-        $this->creditBalance = NULL; $this->lastErrorMessage = NULL; $messageId = NULL;
+        $this->creditBalance = NULL; $this->lastErrorMessage = NULL; $messageId = FALSE;
         if ($this->isSendindEnabled) {
             $messageId = $this->execHTTPSendRequest($message, $recipientPhoneNumber, $businessReference);
         } else {
