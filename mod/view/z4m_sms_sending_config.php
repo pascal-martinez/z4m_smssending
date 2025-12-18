@@ -19,8 +19,8 @@
  * --------------------------------------------------------------------
  * ZnetDK 4 Mobile SMS sending module view
  *
- * File version: 1.1
- * Last update: 06/18/2025
+ * File version: 1.2
+ * Last update: 12/18/2025
  */
 
 // Setting the $color $variable
@@ -109,7 +109,7 @@ require 'fragment/color_scheme.php';
         }
         function showSimulationModal() {
             if (formObj.isModified()) {
-                formObj.showError(formObj.element.date('notsaved'));
+                formObj.showError(formObj.element.data('notsaved'));
                 return;
             }
             const modal = z4m.modal.make('#z4m-sms-sending-config-simulate'),

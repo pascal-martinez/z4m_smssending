@@ -58,7 +58,7 @@ See below informations to enter from the **SMS Sending config.** view to configu
 - **SMS sending enabled** (check box): when this option is checked, SMS are sent.
 - **History of sent SMS enabled** (check box): when this option is checked, sent SMS are recorded by the Application and displayed from the **SMS sent** view.
 
-## TESTING EMAIL SENDING ##
+## TESTING SMS SENDING ##
 ![Screenshot of the Send a simulation SMS... form provided by the ZnetDK 4 Mobile 'z4m_smssending' module](https://mobile.znetdk.fr/applications/default/public/images/modules/z4m_smssending/screenshot1.png)
 
 Once SMS sending is configured, a test SMS can be sent from the form shown when clicking the **Send a simulation SMS...** button from the **SMS Sending config.** view.  
