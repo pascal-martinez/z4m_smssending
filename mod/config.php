@@ -18,8 +18,8 @@
  * --------------------------------------------------------------------
  * Parameters of the ZnetDK 4 Mobile SMS Sending module
  *
- * File version: 1.1
- * Last update: 06/18/2025
+ * File version: 1.2
+ * Last update: 12/18/2025
  */
 
 
@@ -66,9 +66,9 @@ define('MOD_Z4M_SMSSENDING_COLOR_SCHEME', NULL);
  * Module version number
  * @var string Version
  */
-define('MOD_Z4M_SMSSENDING_VERSION_NUMBER','1.1');
+define('MOD_Z4M_SMSSENDING_VERSION_NUMBER','1.2');
 /**
  * Module version date
  * @var string Date in W3C format
  */
-define('MOD_Z4M_SMSSENDING_VERSION_DATE','2025-06-18');
+define('MOD_Z4M_SMSSENDING_VERSION_DATE','2025-12-18');
